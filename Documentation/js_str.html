@@ -1,0 +1,37 @@
+<!-- HTML generated using hilite.me -->
+<div style="background: #f5f5f5; overflow:auto;width:auto;border:solid gray;border-width:0px;padding:1.6em;"><pre style="margin: 0; line-height: 125%">
+import React from 'react';
+import ReactDOM from 'react-dom';
+import * as serviceWorker from './serviceWorker';
+import HomeOne from './home-one';
+import HomeTwo from './home-two';
+import HomeThree from './home-three';
+import HomeFour from './home-four';
+import HomeFive from './home-five';
+import HomeSix from './home-six';
+import HomeSeven from './home-seven';
+import HomeEight from './home-eight';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+class Root extends React.Component {
+  render() {
+    return(
+      &lt;BrowserRouter basename={'/'} &gt;
+        &lt;Switch>
+          &lt;Route path={`${process.env.PUBLIC_URL}/`} component={HomeOne}/&gt;
+          &lt;Route path={`${process.env.PUBLIC_URL}/home-one`} component={HomeOne}/&gt;
+          &lt;Route path={`${process.env.PUBLIC_URL}/home-two`} component={HomeTwo}/&gt;
+          &lt;Route path={`${process.env.PUBLIC_URL}/home-three`} component={HomeThree}/&gt;
+          &lt;Route path={`${process.env.PUBLIC_URL}/home-four`} component={HomeFour}/&gt;
+          &lt;Route path={`${process.env.PUBLIC_URL}/home-five`} component={HomeFive}/&gt;
+          &lt;Route path={`${process.env.PUBLIC_URL}/home-six`} component={HomeSix}/&gt;
+          &lt;Route path={`${process.env.PUBLIC_URL}/home-seven`} component={HomeSeven}/&gt;
+          &lt;Route path={`${process.env.PUBLIC_URL}/home-eight`} component={HomeEight}/&gt;
+        &lt;/Switch&gt;
+      &lt;/BrowserRouter&gt;
+    );
+  }
+}
+ReactDOM.render(&lt;Root /&gt;, document.getElementById('root'));
+serviceWorker.unregister();        
+</div>
